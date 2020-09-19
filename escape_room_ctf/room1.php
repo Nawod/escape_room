@@ -1,5 +1,28 @@
 <?php
-    
+// Start the session
+session_start();
+if (isset($_SESSION['room1'])) {
+    $passcode = "E&SC@P3";
+
+    if((isset($_POST['sub'])))
+    {
+        $input = $_POST['LockInput'];
+        if($passcode == $input)
+        {
+            $_SESSION['room2'] = $passcode;
+            header("location:lobby.php");
+        }
+        else
+        {
+            echo '<script>alert("Opps! Passcode is wrong.")</script>'; 
+        }
+    }
+}
+else
+{  
+    header("location:lobby.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,11 +69,11 @@
         </div>
         <div class="row" style="position:relative;top:-37px">
             <div class="col">
-            <form action="" style="width:207px;margin-left:455px;text-align:center">
+            <form action="room1.php" method="POST" style="width:207px;margin-left:455px;text-align:center">
                 <div class="form-group">
-                    <input type="email" class="form-control" id="LockInput"  placeholder="PASSCODE" style="text-align:center;font-weight:700;color:#ca2f2f">
+                    <input type="text" class="form-control" name="LockInput"  placeholder="PASSCODE" style="text-align:center;font-weight:700;color:#ca2f2f">
                 </div>
-                <a href="room1.php"><button type="submit" class="btn btn-outline-danger" style="position:relative;top:50px">Unlock the Door</button></a>
+                <button type="submit" class="btn btn-outline-danger" name="sub" style="position:relative;top:50px">Unlock the Door</button>
             </from>
             </div>
         </div>

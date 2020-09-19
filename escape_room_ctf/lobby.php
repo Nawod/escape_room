@@ -1,3 +1,10 @@
+<?php
+    // Start the session
+    session_start();
+
+    $_SESSION['room1'] = "room1";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

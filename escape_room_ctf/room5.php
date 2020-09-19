@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Escape Room - Room 04</title>
+    <title>Escape Room - Room 05</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 <body style="background:#1a1a1a">
@@ -15,7 +15,7 @@
         <div class="text-center">
             <div class="row" style="position:relative;top:40px">
                 <div class="col">
-                    <h1 style="color:#ca2f2f;">ROOM 04 </h1>
+                    <h1 style="color:#ca2f2f;">ROOM 05 </h1>
                 </div>
             </div>
             <div class="row" style="position:relative;top:50px">

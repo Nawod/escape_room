@@ -25,6 +25,7 @@
                 <p style="text-align: center;color:#dfdfdf;">"Escape Room is a locked room, which has many clues and hints to unlock the rooms.
                 A room is called as a level. After player entered to the room, he has to find the key
                 to unlock the doors for escape, while solving the puzzels"</p>
+                <p style="text-align: center;color:#dfdfdf;">(The flag format is - 'escape{flag}'.)</p>
             </div>
         </div> 
         <div class="row" style="position:relative;top:130px">

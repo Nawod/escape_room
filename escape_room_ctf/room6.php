@@ -1,16 +1,16 @@
 <?php
 // Start the session
 session_start();
-if (isset($_SESSION['room1'])) {
-    $passcode = "escape{welcome_to_escape_room}";
+if (isset($_SESSION['room6'])) {
+    $passcode = "E&SC@P3";
 
     if((isset($_POST['sub'])))
     {
         $input = $_POST['LockInput'];
         if($passcode == $input)
         {
-            $_SESSION['room2'] = $passcode;
-            header("location:room2.php");
+            $_SESSION['room7'] = $passcode;
+            header("location:room7.php");
         }
         else
         {
@@ -20,7 +20,7 @@ if (isset($_SESSION['room1'])) {
 }
 else
 {  
-    header("location:lobby.php");
+    #header("location:lobby.php");
 }
 
 ?>
@@ -29,7 +29,7 @@ else
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Escape Room - Room 01</title>
+    <title>Escape Room - Room 06</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 <body style="background:#1a1a1a">
@@ -37,23 +37,15 @@ else
     <div class="text-center">
         <div class="row" style="position:relative;top:40px">
             <div class="col">
-                <h1 style="color:#ca2f2f;">ROOM 01</h1>
+                <h1 style="color:#ca2f2f;">ROOM 06</h1>
             </div>
         </div>
         <div class="row" style="position:relative;top:50px">
             <div class="col">
                 <p style="color:#dfdfdf;">"Oh! Now you stucked in a room. To escape from this room, you have to open the padlock."</p>
-                <p style="color:#dfdfdf;">"The passcode of the padlock is inside the safelocker and it has been also locked by a key."</p>
             </div>
         </div>
-        <div class="row" style="position:relative;top:90px">
-            <div class="col">
-                    <img src="images/ceaser.jpg" class="img-thumbnail" alt="Responsive image" style="width:auto;height:460px">
-            </div>
-            <div class="col">
-                    <img src="images/safe.jpg" class="img-thumbnail" alt="Responsive image" style="width:400px;height:460px">
-            </div>
-        </div>
+
         <hr style="border-top: 2px solid #dfdfdf;position:relative;top:105px">
         <div class="row" style="position:relative;top:130px">
             <div class="col">
@@ -69,7 +61,7 @@ else
         </div>
         <div class="row" style="position:relative;top:-37px">
             <div class="col">
-            <form action="room1.php" method="POST" style="width:207px;margin-left:455px;text-align:center">
+            <form action="" method="POST" style="width:207px;margin-left:455px;text-align:center">
                 <div class="form-group">
                     <input type="text" class="form-control" name="LockInput"  placeholder="PASSCODE" style="text-align:center;font-weight:700;color:#ca2f2f">
                 </div>

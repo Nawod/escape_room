@@ -1,5 +1,27 @@
 <?php
+// Start the session
+session_start();
+if (isset($_SESSION['room3'])) {
+    $passcode = "escape{SmFnYXRoIENoYW1pbGE=}";
 
+    if((isset($_POST['sub'])))
+    {
+        $input = $_POST['LockInput'];
+        if($passcode == $input)
+        {
+            $_SESSION['room4'] = $passcode;
+            header("location:room4.php");
+        }
+        else
+        {
+            echo '<script>alert("Opps! Passcode is wrong.")</script>'; 
+        }
+    }
+}
+else
+{  
+    #header("location:lobby.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,17 +42,23 @@
             </div>
             <div class="row" style="position:relative;top:50px">
                 <div class="col">
-                    <p style="color:#dfdfdf;">"There is an Army base in  64th lane"</p>
-                    <p style="color:#dfdfdf;">"In that base, there is a person called, "Jagath Chamila" and he can help you to escape this Room</p>
-                    
+                    <p style="color:#dfdfdf;">"Another room..!</p>
+                    <p style="color:#dfdfdf;">"Here, there is a postcard on the table. It may help to escape from this room "</p>
                 </div>
             </div>
-           
+            <div class="row" style="position:relative;top:75px">
+                <div class="col">
+                    <div class="text-center">
+                        <img src="images/postcard.jpg" class="img-thumbnail" alt="Responsive image" style="width:auto;height:370px">
+                    </div>
+                </div>
+            </div>
 
             <hr style="border-top: 2px solid #dfdfdf;position:relative;top:105px">
             <div class="row" style="position:relative;top:130px">
                 <div class="col">
                     <p style="color:#dfdfdf;">"Unlock the padlock by entering passcode."</p>
+                    <p style="color:#dfdfdf;">"Make your answer as 'escape{flag}' format"</p>
                 </div>
             </div>
             <div class="row" style="position:relative;top:150px">
@@ -42,11 +70,11 @@
             </div>
             <div class="row" style="position:relative;top:-37px">
                 <div class="col">
-                    <form action="" style="width:207px;margin-left:455px;text-align:center">
+                    <form action="" method="POST" style="width:207px;margin-left:455px;text-align:center">
                         <div class="form-group">
-                            <input type="email" class="form-control" id="LockInput" placeholder="PASSCODE" style="text-align:center;font-weight:700;color:#ca2f2f">
+                            <input type="text" class="form-control" name="LockInput" placeholder="PASSCODE" style="text-align:center;font-weight:700;color:#ca2f2f">
                         </div>
-                        <button type="submit" class="btn btn-outline-danger" style="position:relative;top:50px">Unlock the Door</button>
+                        <button type="submit" name="sub" class="btn btn-outline-danger" style="position:relative;top:50px">Unlock the Door</button>
                         </from>
                 </div>
             </div>

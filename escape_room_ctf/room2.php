@@ -1,5 +1,27 @@
 <?php
+// Start the session
+session_start();
+if (isset($_SESSION['room2'])) {
+    $passcode = "E&SC@P3";
 
+    if((isset($_POST['sub'])))
+    {
+        $input = $_POST['LockInput'];
+        if($passcode == $input)
+        {
+            $_SESSION['room3'] = $passcode;
+            header("location:room3.php");
+        }
+        else
+        {
+            echo '<script>alert("Opps! Passcode is wrong.")</script>'; 
+        }
+    }
+}
+else
+{  
+    #header("location:lobby.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +42,9 @@
             </div>
             <div class="row" style="position:relative;top:50px">
                 <div class="col">
+                    <p style="color:#dfdfdf;">"You have entered into new room. </p>
+                    <p style="color:#dfdfdf;">Hey! what is that creepy sound? Hurryup, escape from here..."</p>
                     <p style="color:#dfdfdf;">"look ! it is kind of like a terminal but there is no SUDO command in it"</p>
-
                 </div>
             </div>
             <div class="row" style="position:relative;top:90px">
@@ -52,11 +75,11 @@
             </div>
             <div class="row" style="position:relative;top:-37px">
                 <div class="col">
-                    <form action="" style="width:207px;margin-left:455px;text-align:center">
+                    <form action="" method = "POST" style="width:207px;margin-left:455px;text-align:center">
                         <div class="form-group">
-                            <input type="email" class="form-control" id="LockInput" placeholder="PASSCODE" style="text-align:center;font-weight:700;color:#ca2f2f">
+                            <input type="text" class="form-control" name="LockInput" placeholder="PASSCODE" style="text-align:center;font-weight:700;color:#ca2f2f">
                         </div>
-                        <button type="submit" class="btn btn-outline-danger" style="position:relative;top:50px">Unlock the Door</button>
+                        <button type="submit" name = "sub" class="btn btn-outline-danger" style="position:relative;top:50px">Unlock the Door</button>
                         </from>
                 </div>
             </div>

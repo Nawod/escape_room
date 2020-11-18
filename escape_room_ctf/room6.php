@@ -43,9 +43,9 @@ else
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Escape Room - Room 07</title>
+    <title>Escape Room - Room 06</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+</head>
 <body style="background:#1a1a1a">
     
     <div class="container">
@@ -104,9 +104,6 @@ else
                 </div>
             </div>
         </div>
-<script>
-    var nothing = "this is key";
-</script>
         
 </body>
 

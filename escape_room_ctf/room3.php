@@ -2,7 +2,7 @@
 // Start the session
 session_start();
 if (isset($_SESSION['room3'])) {
-    $passcode = "escape{SmFnYXRoIENoYW1pbGE=}";
+    $passcode = "escape{T3phbiBFcmVuIEJpbGdlbg==}";
 
     if((isset($_POST['sub'])))
     {
@@ -20,7 +20,7 @@ if (isset($_SESSION['room3'])) {
 }
 else
 {  
-    #header("location:lobby.php");
+    //header("location:lobby.php");
 }
 ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ else
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Escape Room - Room 03</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+</head>
 <body style="background:#1a1a1a">
     <div class="container">
         <div class="text-center">

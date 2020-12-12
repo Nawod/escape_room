@@ -3,7 +3,7 @@
 <?php
 // Start the session
 session_start();
-if (isset($_SESSION['room1'])) {
+if (isset($_SESSION['room8'])) {
     $passcode = "escape{c00lwater}";
 
     if((isset($_POST['sub'])))

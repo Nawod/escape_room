@@ -2,7 +2,7 @@
 // Start the session
 session_start();
 if (isset($_SESSION['room2'])) {
-    $passcode = "E&SC@P3";
+    $passcode = "escape{12h3jgvijyhdgfu1234jhb1u2}";
 
     if((isset($_POST['sub'])))
     {

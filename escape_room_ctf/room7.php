@@ -51,7 +51,7 @@ if (isset($_SESSION['room7'])) {
 }
 else
 {  
-    //header("location:lobby.php");
+    header("location:lobby.php");
 }
 
 

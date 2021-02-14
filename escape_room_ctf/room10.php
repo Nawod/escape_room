@@ -20,7 +20,7 @@ if (isset($_SESSION['room9'])) {
 }
 else
 {  
-    //header("location:lobby.php");
+    header("location:lobby.php");
 }
 ?>
 <!DOCTYPE html>
